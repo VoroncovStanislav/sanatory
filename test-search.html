@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тест — поиск санаториев</title>
+<style>
+  :root{
+    --green:#22c55e;
+    --green-d:#16a34a;
+    --purple:#6d4aff;
+    --purple-d:#5a38e0;
+    --ink:#1d1d24;
+    --muted:#7c7c8a;
+    --line:#e9e9ef;
+    --bg-soft:#efecff;
+    --radius:12px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background:#fff;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    padding:0;
+  }
+  .container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  /* Заголовок страницы — просто для ориентира */
+  .page-head{
+    padding:24px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .page-head h1{font-size:20px;font-weight:800}
+  .page-head p{font-size:14px;color:var(--muted);margin-top:4px}
+
+  /* Секция с поиском — обёрнута в hero-фон */
+  .hero{
+    background:var(--bg-soft);
+    padding:60px 0 70px;
+  }
+  .hero__title{
+    text-align:center;
+    font-size:36px;
+    line-height:1.2;
+    font-weight:800;
+    margin-bottom:36px;
+    letter-spacing:-.5px;
+  }
+
+  /* ---------- Стили формы от partner.fire.js ---------- */
+
+  .partner-finder{max-width:1000px;margin:0 auto}
+
+  .partner-finder > form,
+  .partner-finder > div{
+    background:#fff;
+    border-radius:16px;
+    padding:22px;
+    box-shadow:0 20px 45px rgba(60,40,150,.10);
+  }
+
+  .partner-finder input,
+  .partner-finder select,
+  .partner-finder textarea{
+    border:1px solid var(--line);
+    background:#f4f4f7;
+    border-radius:8px;
+    padding:11px 12px;
+    font-family:inherit;
+    font-size:15px;
+    color:var(--ink);
+    width:100%;
+    outline:none;
+    transition:.15s;
+    min-width:0;
+  }
+  .partner-finder input:focus,
+  .partner-finder select:focus,
+  .partner-finder textarea:focus{
+    border-color:var(--purple);
+    background:#fff;
+  }
+  .partner-finder label,
+  .partner-finder .label,
+  .partner-finder .crs-label{
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:4px;
+    display:block;
+  }
+
+  .partner-finder button[type="submit"],
+  .partner-finder .crs-submit{
+    background:var(--green);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:14px 20px;
+    font-weight:600;
+    font-size:16px;
+    cursor:pointer;
+    width:100%;
+    transition:.15s;
+    font-family:inherit;
+  }
+  .partner-finder button[type="submit"]:hover,
+  .partner-finder .crs-submit:hover{background:var(--green-d)}
+
+  .partner-finder button:not([type="submit"]),
+  .partner-finder .crs-button-secondary{
+    background:var(--purple);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:14px 20px;
+    font-weight:600;
+    font-size:16px;
+    cursor:pointer;
+    width:100%;
+    transition:.15s;
+    font-family:inherit;
+  }
+  .partner-finder button:not([type="submit"]):hover{background:var(--purple-d)}
+
+  /* ---------- Результаты ---------- */
+
+  .partner-catalog{
+    max-width:1180px;
+    margin:0 auto;
+    padding:40px 24px;
+  }
+  .partner-catalog:empty{display:none}
+
+  .partner-catalog .crs_item,
+  .partner-catalog .crs-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+    margin-bottom:16px;
+    transition:box-shadow .2s ease;
+  }
+  .partner-catalog .crs_item:hover{box-shadow:0 8px 24px rgba(60,40,150,.08)}
+  .partner-catalog h3,
+  .partner-catalog .crs_item__title{
+    font-size:18px;
+    font-weight:700;
+    color:var(--purple);
+    margin-bottom:8px;
+  }
+  .partner-catalog p{font-size:14px;color:var(--muted);margin-bottom:8px}
+  .partner-catalog .price,
+  .partner-catalog .crs_item__price{font-size:16px;font-weight:800;color:var(--green)}
+
+  /* ---------- Адаптив ---------- */
+
+  @media (max-width:720px){
+    .hero{padding:36px 0 48px}
+    .hero__title{font-size:24px;margin-bottom:24px}
+    .partner-finder > form,
+    .partner-finder > div{padding:14px;border-radius:12px}
+    .partner-finder input,
+    .partner-finder select{padding:10px 12px;font-size:14px}
+    .partner-finder button[type="submit"],
+    .partner-finder button:not([type="submit"]){padding:12px 16px;font-size:15px}
+    .partner-catalog{padding:24px 12px}
+    .partner-catalog .crs_item,
+    .partner-catalog .crs-item{padding:14px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Шапка страницы -->
+<div class="page-head">
+  <div class="container">
+    <h1>Тест: поиск санаториев Stells</h1>
+    <p>Отдельная страница для проверки интеграции. Скрипт <code>partner.fire.js</code> отрисует форму сам.</p>
+  </div>
+</div>
+
+<!-- Поиск -->
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__title">Отдыхайте с пользой!<br>Онлайн-бронирование санаториев</h1>
+
+    <!-- Сюда партнёрский скрипт вставит форму -->
+    <div id="crs_partner_finder" class="partner-finder"></div>
+  </div>
+</section>
+
+<!-- Контейнер для результатов поиска -->
+<div id="crs_partner_catalog" class="partner-catalog"></div>
+
+<!-- Партнёрский скрипт + ключ -->
+<div class="s-partnership" style="display:none;">ZiKAEXqA2vElUudIS04ilTjZm4b4giMCDNUObe5r64s%3D</div>
+<script type="text/javascript" charset="utf-8" src="https://stells.info/assets/js/partner.fire.js"></script>
+
+<!-- Автоскролл к результатам, когда они появятся -->
+<script>
+(function () {
+  var catalog = document.getElementById('crs_partner_catalog');
+  if (!catalog) return;
+
+  var observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (m) {
+      if (m.addedNodes.length > 0 && catalog.innerHTML.trim() !== '') {
+        catalog.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+  observer.observe(catalog, { childList: true, subtree: true });
+})();
+</script>
+
+</body>
+</html>
