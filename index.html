@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Санаторий.ру — онлайн-бронирование санаториев</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <nav class="topbar__nav">
+      <a href="#">Санатории</a>
+      <a href="#">Блог</a>
+      <a href="#">Новости</a>
+    </nav>
+    <a class="topbar__phone" href="tel:88005553535">8 (800) 555-35-35</a>
+  </div>
+</div>
+
+<!-- Header -->
+<!-- Header -->
+<header class="header">
+  <div class="container header__inner">
+    <a href="#" class="logo">Санаторий<span>.ру</span></a>
+
+    <nav class="header__nav">
+      <a href="#">Направления</a>
+      <a href="#">Акции</a>
+      <a href="#">Помощь</a>
+    </nav>
+
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Мобильное меню -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu__top">
+    <a href="#" class="logo">Санаторий<span>.ру</span></a>
+    <button class="mobile-menu__close" aria-label="Закрыть меню">✕</button>
+  </div>
+
+  <nav class="mobile-menu__nav">
+    <a href="#">Направления</a>
+    <a href="#">Акции</a>
+    <a href="#">Помощь</a>
+    <a href="#">Санатории</a>
+    <a href="#">Блог</a>
+    <a href="#">Новости</a>
+  </nav>
+
+  <div class="mobile-menu__contacts">
+    <a href="tel:88005553535" class="mobile-menu__phone">8 (800) 555-35-35</a>
+    <div class="mobile-menu__muted">Круглосуточно</div>
+  </div>
+
+  <button class="btn btn--green btn--block mobile-menu__cta">Подобрать санаторий</button>
+</div>
+<div class="mobile-menu__overlay" hidden></div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__title">
+      Отдыхайте с пользой!<br>
+      Онлайн-бронирование более 3000 санаториев
+    </h1>
+    <script type="text/javascript" charset="utf-8" src="https://stells.info/assets/js/partner.fire.js"></script>
+<div class="s-partnership" style="display:none;">ZiKAEXqA2vElUudIS04ilTjZm4b4giMCDNUObe5r64s%3D</div>
+    <!-- <form class="search" onsubmit="event.preventDefault();">
+      <div class="search__row">
+        <div class="field field--grow">
+          <label>Куда поехать?</label>
+          <input type="text" placeholder="Регион, курорт, санаторий...">
+        </div>
+        <div class="field">
+          <label>Заезд</label>
+          <input type="text" placeholder="mm/dd/yyyy">
+        </div>
+        <div class="field">
+          <label>Выезд</label>
+          <input type="text" placeholder="mm/dd/yyyy">
+        </div>
+        <div class="field">
+          <label>Кто едет?</label>
+          <select>
+            <option>2 взрослых</option>
+            <option>1 взрослый</option>
+            <option>2 взрослых + 1 ребёнок</option>
+          </select>
+        </div>
+      </div>
+      <div class="search__actions">
+        <button type="submit" class="btn btn--green btn--lg">Подобрать санатории</button>
+        <button type="button" class="btn btn--purple btn--lg">Показать на карте</button>
+      </div>
+    </form> -->
+  </div>
+  
+</section>
+
+
+
+<!-- Акции и скидки -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Акции и скидки</h2>
+      <a href="#" class="link-more">Смотреть все →</a>
+    </div>
+
+    <div class="cards">
+      <!-- card 1 -->
+      <article class="card">
+        <div class="card__media">
+          <span class="badge badge--green">Скидка 20%</span>
+          <img src="assets/images/300x150.svg" alt="">
+        </div>
+        <div class="card__body">
+          <div class="stars">★★★★★</div>
+          <h3 class="card__title">Гранд Отель Жемчужина</h3>
+          <p class="card__place">Кисловодск, ул. Ленина</p>
+          <div class="card__price">
+            <span class="old">10 000 ₽</span>
+            <span class="new">7 900 ₽</span>
+          </div>
+          <button class="btn btn--green btn--block">Забронировать</button>
+        </div>
+      </article>
+
+      <!-- card 2 -->
+      <article class="card">
+        <div class="card__media">
+          <span class="badge badge--green">Топ</span>
+          <img src="assets/images/300x150.svg" alt="">
+        </div>
+        <div class="card__body">
+          <div class="stars">★★★★★</div>
+          <h3 class="card__title">Санаторий «Долина»</h3>
+          <p class="card__place">Пятигорск, пр. Кирова</p>
+          <div class="card__price">
+            <span class="old">8 500 ₽</span>
+            <span class="new">6 200 ₽</span>
+          </div>
+          <button class="btn btn--green btn--block">Забронировать</button>
+        </div>
+      </article>
+
+      <!-- card 3 -->
+      <article class="card">
+        <div class="card__media">
+          <img src="assets/images/300x150.svg" alt="">
+        </div>
+        <div class="card__body">
+          <div class="stars">★★★★★</div>
+          <h3 class="card__title">Spa-отель Империал</h3>
+          <p class="card__place">Ессентуки, ул. Пушкина</p>
+          <div class="card__price">
+            <span class="new">12 500 ₽</span>
+          </div>
+          <button class="btn btn--green btn--block">Забронировать</button>
+        </div>
+      </article>
+
+      <!-- card 4 -->
+      <article class="card">
+        <div class="card__media">
+          <img src="assets/images/300x150.svg" alt="">
+        </div>
+        <div class="card__body">
+          <div class="stars">★★★★★</div>
+          <h3 class="card__title">Пансионат «Солнечный»</h3>
+          <p class="card__place">Сочи, Адлерский район</p>
+          <div class="card__price">
+            <span class="old">15 000 ₽</span>
+            <span class="new">11 900 ₽</span>
+          </div>
+          <button class="btn btn--green btn--block">Забронировать</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Популярные направления -->
+<section class="section">
+  <div class="container">
+    <h2>Популярные направления</h2>
+    <div class="tags">
+      <a href="#" class="tag">Россия</a>
+      <a href="#" class="tag">Беларусь</a>
+      <a href="#" class="tag">Абхазия</a>
+      <a href="#" class="tag">Армения</a>
+      <a href="#" class="tag">Казахстан</a>
+      <a href="#" class="tag">Узбекистан</a>
+    </div>
+  </div>
+</section>
+
+<!-- Полезный контент -->
+<section class="section">
+  <div class="container">
+    <h2>Полезный контент</h2>
+
+    <div class="content-grid">
+      <!-- Новости -->
+      <div class="col">
+        <h3 class="col__title">Новости</h3>
+
+        <a class="news" href="#">
+          <div class="news__date">28.08.2026</div>
+          <div class="news__text">Изменение графика работы департамента по работе с туристическими агентствами</div>
+        </a>
+        <a class="news" href="#">
+          <div class="news__date">19.06.2026</div>
+          <div class="news__text">Национальный туроператор «Алеан» подвёл итоги летнего туристического сезона</div>
+        </a>
+        <a class="news" href="#">
+          <div class="news__date">02.06.2026</div>
+          <div class="news__text">Открытие нового оздоровительного комплекса в Подмосковье</div>
+        </a>
+      </div>
+
+      <!-- Блог -->
+      <div class="col">
+        <h3 class="col__title">Блог</h3>
+
+        <a class="blog-item" href="#">
+          <img src="assets/images/150x100.svg" alt="">
+          <div>
+            <div class="blog-item__title">Как выбрать санаторий для лечения ЖКТ?</div>
+            <div class="blog-item__meta">12.07.2026 · 3 мин чтения</div>
+          </div>
+        </a>
+        <a class="blog-item" href="#">
+          <img src="assets/images/150x100.svg" alt="">
+          <div>
+            <div class="blog-item__title">10 мифов о санаторно-курортном лечении</div>
+            <div class="blog-item__meta">10.07.2026 · 5 мин чтения</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Подписка -->
+<section class="section">
+  <div class="container">
+    <div class="subscribe">
+      <div class="subscribe__info">
+        <h3>Подпишитесь на рассылку</h3>
+        <p>Скидки, горячие туры и акции. Без спама.</p>
+      </div>
+      <form class="subscribe__form" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="Введите ваш email" required>
+        <label class="checkbox">
+          <input type="checkbox" required>
+          <span>Даю согласие на обработку персональных данных</span>
+        </label>
+        <button class="btn btn--purple btn--block">Подписаться</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="#" class="logo">Санаторий<span>.ру</span></a>
+        <h4 class="footer__title">Направления</h4>
+        <ul>
+          <li><a href="#">Кавказские Минеральные Воды</a></li>
+          <li><a href="#">Сочи</a></li>
+          <li><a href="#">Подмосковье</a></li>
+          <li><a href="#">Беларусь</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__title">Принимаем к оплате</h4>
+        <div class="pay">
+          <img class="pay__logo" src="MasterCard.svg" alt="">
+          <img class="pay__logo" src="Visa.svg" alt="">
+          <img class="pay__logo" src="Mir.svg" alt="">
+          <img class="pay__logo" src="SBP.svg" alt="">
+        </div>
+
+        <h4 class="footer__title">О нас</h4>
+        <ul>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">Реквизиты</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__title">Следите и общайтесь с нами</h4>
+        <div class="socials">
+          <!-- <a href="#" aria-label="VK">VK</a> -->
+          <a href="#" aria-label="VK"><img src="vk.svg" alt=""></a>
+          <a href="#" aria-label="VK"><img src="dzen.svg" alt=""></a>
+          <a href="#" aria-label="VK"><img src="tg.svg" alt=""></a>
+          <a href="#" aria-label="VK"><img src="max.svg" alt=""></a>
+        </div>
+
+        <h4 class="footer__title">Помощь</h4>
+        <ul>
+          <li><a href="#">Как купить</a></li>
+          <li><a href="#">Возврат и оплата</a></li>
+          <li><a href="#">Вопрос-ответ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__title">Купить путёвку</h4>
+        <a class="footer__phone" href="tel:88005555732">8 (800) 555-57-32</a>
+        <div class="footer__muted">круглосуточно</div>
+        <div class="footer__muted">Почта</div>
+        <a class="footer__mail" href="mailto:hello@sanatory.ru">hello@sanatory.ru</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div>© 2026 «Санаторий.ру» · <a href="#">Пользовательское соглашение</a> · <a href="#">Правовая оферта</a> · <a href="#">Каталог</a></div>
+      <div class="footer__reg">
+        <img class="reg-icon" src="reestr.svg" alt="Реестр туроператоров">
+        <!-- <span class="reg-icon">★</span> -->
+        Мы в реестре туроператоров<br>РТО 023203
+      </div>
+    </div>
+
+    <p class="footer__disclaimer">
+      Для получения подробной информации о наличии и стоимости услуг обращайтесь по указанным телефонам.
+      Представленная информация не является публичной офертой. Все цены указаны в рублях.
+    </p>
+  </div>
+</footer>
+
+<!-- Floating chat -->
+<button class="chat-btn" aria-label="Чат">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
